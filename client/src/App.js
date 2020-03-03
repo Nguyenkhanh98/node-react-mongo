@@ -1,4 +1,5 @@
 import React from 'react';
+import Game from './components/Game';
 import { connect } from 'react-redux';
 
 
@@ -41,11 +42,9 @@ class App extends React.Component {
 
   }
   render(){
-    if(this.state.hasError){
-      return <h1>hello Im error</h1>;
-    }
+
     return (
-    <h1> Hello World</h1>
+      <Game/>
     );
   }
 };
