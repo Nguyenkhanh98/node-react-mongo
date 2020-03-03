@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: auto;
+  .nav {
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-between;
+    padding: 0.8em 8em;
+    height: auto;
+    h2{
+      margin: 0;
+      font-size: 2.4em;
+      color: rgb(105, 105, 105);
+      text-align: center;
+    }
+    button{
+      font-size: 1.4em;
+      font-weight: bold;
+      border: none;
+      background-color: inherit;
+      color: #8e8e8e;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover{
+        color: rgb(8, 161, 149);
+      }
+    }
+  }
+}
