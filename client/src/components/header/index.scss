@@ -26,5 +26,17 @@
         color: rgb(8, 161, 149);
       }
     }
+    &-signin {
+      margin-top: auto;
+      margin-bottom: auto;
+      display: -webkit-inline-box;
+      &-icon {
+        padding-right: 0.2em;
+      }
+      &:hover {
+        color: rgb(8, 161, 149);
+        cursor: pointer;
+      }
+    }
   }
 }
