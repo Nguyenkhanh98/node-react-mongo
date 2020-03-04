@@ -1,6 +1,7 @@
+@import "../app/index.scss" ;
 .header {
-  width: 100%;
-  border-bottom: 1px solid #eee;
+  padding: 0 4em;
+  border-bottom: 1px solid $defaultcolor;
   height: auto;
   .nav {
     display: flex;
@@ -23,12 +24,13 @@
       cursor: pointer;
       text-decoration: none;
       &:hover{
-        color: rgb(8, 161, 149);
+        color: rgb(3, 3, 3);
       }
     }
     &-signin {
       margin-top: auto;
       margin-bottom: auto;
+      padding: 0.2em 0;
       display: -webkit-inline-box;
       &-icon {
         padding-right: 0.2em;

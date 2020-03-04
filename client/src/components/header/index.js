@@ -18,13 +18,12 @@ class Header extends React.Component {
 
           <h2>Personal</h2>
           <div className="nav-signin">
-           <FontAwesomeIcon icon={faUserCircle} className ="nav-signin-icon"/>
-           <div>Sign in</div>
+            <FontAwesomeIcon icon={faUserCircle} className="nav-signin-icon" />
+            <div>Sign in</div>
           </div>
 
         </nav>
       </header>
-
     );
   }
 }

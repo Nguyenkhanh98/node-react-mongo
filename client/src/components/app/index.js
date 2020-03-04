@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../header';
-import Signup from '../Signup';
+import Signup from '../signup';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -46,10 +47,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <Header />
-      <main>
-        <Signup/>
-      </main>
+        <Header />
+        <main>
+          <Signup />
+        </main>
       </div>
     );
   }
