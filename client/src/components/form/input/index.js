@@ -5,14 +5,14 @@ import './index.scss';
 
 class Input extends React.PureComponent {
   render() {
-    console.log(this.props);
     const {
-      className, icon, label, type, placeholder, value, onChange, right, name,
+      className, icon, label, type, placeholder, onChange, right, name, inputStyle, siblingStyle,
     } = this.props;
+    const { data } = this.props;
     return (
-      <div className={className}>
-        {icon ? (<FontAwesomeIcon icon={icon} />) : (
-          <label>
+      <div className="input">
+        {icon ? (<FontAwesomeIcon style={siblingStyle} icon={icon} />) : (
+          <label style={siblingStyle}>
             {label}
           </label>
         )}
@@ -20,14 +20,17 @@ class Input extends React.PureComponent {
           type={type}
           placeholder={placeholder}
           name={name}
-          value={value}
+          value={data.value}
           onChange={onChange}
+          style={inputStyle}
+
         />
         {right ? (
-          <label>
+          <label style={siblingStyle}>
             {label}
           </label>
         ) : ''}
+
       </div>
     );
   }
@@ -35,20 +38,24 @@ class Input extends React.PureComponent {
 
 Input.defaultProps = {
 
-  value: '',
+  data: '',
   className: '',
   onChange: '',
   icon: '',
   label: '',
   right: '',
+  inputStyle: { width: '70%' },
+  siblingStyle: { width: '20%' },
   name: '',
 };
 
 Input.propTypes = {
   type: PropTypes.string.isRequired,
+  inputStyle: PropTypes.object,
+  siblingStyle: PropTypes.object,
   placeholder: PropTypes.string,
   name: PropTypes.string,
-  value: PropTypes.any,
+  data: PropTypes.any,
   className: PropTypes.string,
   onChange: PropTypes.func,
   icon: PropTypes.object,

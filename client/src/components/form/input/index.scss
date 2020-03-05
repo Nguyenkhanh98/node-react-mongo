@@ -1,1 +1,16 @@
 @import '../../app/index.scss';
+.input {
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  svg{
+    // width: 20% !important;
+    color:  $textcolor ;
+    text-align: center;
+  }
+  input{
+    padding-left: 0.2em;
+    height: 1.7em;
+  }
+}
