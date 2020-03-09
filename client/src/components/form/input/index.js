@@ -18,12 +18,11 @@ class Input extends React.PureComponent {
         )}
         <input
           type={type}
-          placeholder={placeholder}
+          placeholder={data.error ? data.error : placeholder}
           name={name}
           value={data.value}
           onChange={onChange}
-          style={inputStyle}
-
+          style={(data.error && data.value === '') ? { ...inputStyle, border: '1px solid #e03c3c' } : inputStyle}
         />
         {right ? (
           <label style={siblingStyle}>
