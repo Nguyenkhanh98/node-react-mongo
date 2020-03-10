@@ -1,10 +1,10 @@
 const restify = require('restify');
 const finalHandler = require('finalhandler');
 const morgan = require('morgan');
-const apiv1 = require('../api');
+const api = require('../api');
 
 
-module.exports = (server) => {
+module.exports = async (server) => {
   server.use(restify.plugins.acceptParser(server.acceptable));
   server.use(restify.plugins.queryParser());
   server.use(restify.plugins.bodyParser());
@@ -18,5 +18,5 @@ module.exports = (server) => {
       await next();
     });
   });
-  server.use('/api/v1', apiv1);
+   await api(server);
 };
