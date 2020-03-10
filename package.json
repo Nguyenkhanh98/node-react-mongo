@@ -18,6 +18,8 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
+    "bcrypt": "^4.0.1",
+    "client-sessions": "^0.8.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "finalhandler": "^1.1.2",
@@ -26,6 +28,8 @@
     "laabr": "^6.0.2",
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "restify": "^8.5.1",
     "restify-router": "^0.5.1",
     "typedi": "^0.8.0",
