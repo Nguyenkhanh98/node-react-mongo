@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const log = require('../loggers/bunyan');
 
 const SALT_WORK_FACTOR = 10;
 const User = new mongoose.Schema({
@@ -29,19 +30,20 @@ const User = new mongoose.Schema({
   },
 },
 { timestamps: true });
-User.pre('save', (next) => {
+User.pre('save', function preSave(next) {
   if (!this.isModified('password')) return next();
 
-  bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
+  bcrypt.genSalt(SALT_WORK_FACTOR, function genSalt(err, salt) {
     if (err) return next(err);
 
-    bcrypt.hash(!this.password, salt, (err, hash) => {
-      if (err) return next(err);
-
+    bcrypt.hash(this.password, salt, function hashPassword(error, hash) {
+      if (error) return next(error);
       this.password = hash;
-      next();
+      return next();
     });
+    return next();
   });
+  return next();
 });
 
 User.methods.comparePassword = (candidatePassword, cb) => {
@@ -50,4 +52,5 @@ User.methods.comparePassword = (candidatePassword, cb) => {
     cb(null, isMatch);
   });
 };
+mongoose.set('useCreateIndex', true);
 module.exports = mongoose.model('User', User);

@@ -12,7 +12,6 @@ const textField ={
   error:'',
 };
 class Signup extends React.Component {
-  componentDidMount
   constructor(props) {
     super(props);
 

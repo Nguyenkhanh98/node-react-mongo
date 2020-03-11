@@ -1,11 +1,13 @@
 const restify = require('restify');
-const finalHandler = require('finalhandler');
-const morgan = require('morgan');
+
 const passport = require('passport');
 const session = require('client-sessions');
+const corsMiddleware = require('restify-cors-middleware');
 const passportConfig = require('../configs/passport');
 const api = require('../api');
 const config = require('../configs');
+
+const log = require('../loggers/winston');
 
 module.exports = async (server) => {
   server.use(restify.plugins.acceptParser(server.acceptable));
@@ -18,15 +20,18 @@ module.exports = async (server) => {
   }));
   server.use(passport.initialize());
   server.use(passport.session());
-  passportConfig(passportConfig);
-  server.pre(async (req, res, next) => {
-    const done = finalHandler(req, res);
-    morgan(req, res, async (err) => {
-      if (err) {
-        return done(err);
-      }
-      await next();
-    });
+  passportConfig(passport);
+
+  const cors = corsMiddleware({
+    preflightMaxAge: 5,
+    origins: ['http://localhost:3000'],
   });
-  await api(server);
+  server.use(cors.actual);
+
+  server.pre(cors.preflight);
+  server.pre((req, res, next) => {
+    req.log.info({ req }, 'REQUEST');
+    next();
+  });
+  api(server);
 };

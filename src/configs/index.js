@@ -10,4 +10,5 @@ module.exports = {
   host: nodeEnv ? process.env.HOST_PRODUCT : process.env.HOST_DEV,
   port: process.env.PORT,
   dbHost: process.env.DBHOST,
+  secret: process.env.SESSION_SECRET,
 };

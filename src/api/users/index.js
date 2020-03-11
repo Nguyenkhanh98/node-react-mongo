@@ -1,10 +1,12 @@
 const restifyRouter = require('restify-router');
+
 const router = new restifyRouter.Router();
 const passport = require('passport');
-router.get('/', (req,res,next) {
 
+router.post('/', passport.authenticate('local-login'), (req, res, next) => {
+  res.send('ss');
   next();
-})
+});
 
 
 module.exports = router;

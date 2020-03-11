@@ -20,5 +20,5 @@ module.exports = async (restifyServer) => {
   });
 
   await restifyLoader(restifyServer);
-  logger.info('hapi loaded');
+  logger.info('Restify loaded');
 };

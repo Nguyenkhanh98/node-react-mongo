@@ -1,9 +1,9 @@
 const LocalStragy = require('passport-local').Strategy;
+const log = require('../loggers/bunyan');
 const userModel = require('../models/user');
 
-
 module.exports = (passport) => {
-  passport.use('local-login', new LocalStragy(async (username, email, password, done) => {
+  passport.use('local-login', new LocalStragy({ passReqToCallback: true }, async (username, email, password, done) => {
     try {
       const user = await userModel.findOne({ username, email });
       if (!user) {
@@ -13,6 +13,7 @@ module.exports = (passport) => {
         if (err) return done(null, false, { msg: 'wrong password' });
       })) { return done(null, user); }
     } catch (error) {
+      log.error(error.message, 'at error passport');
       return done(null, false, JSON.stringify(error));
     }
   }));
