@@ -6,9 +6,10 @@ const accountService = require('../../services/account');
 const router = new restifyRouter.Router();
 
 router.post('/signup', async (req, res, next) => {
+  console.log(req.body);
   const response = await accountService.signUp(req.body);
   if (response) {
-    res.status(200).send('sign up succeess');
+    res.send('sign up succeess');
   } else {
     return next(new errors.ForbiddenError());
   }

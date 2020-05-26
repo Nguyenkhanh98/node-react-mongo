@@ -28,11 +28,13 @@
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "postcss-normalize": "^9.0.0",
     "restify": "^8.5.1",
     "restify-cors-middleware": "^1.1.1",
     "restify-errors": "^8.0.2",
     "restify-router": "^0.5.1",
     "typedi": "^0.8.0",
     "winston": "^3.2.1"
-  }
+  },
+  "browserslist": "last 2 versions"
 }

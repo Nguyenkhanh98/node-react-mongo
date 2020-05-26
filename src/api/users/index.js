@@ -4,7 +4,7 @@ const router = new restifyRouter.Router();
 const passport = require('passport');
 
 router.post('/', passport.authenticate('local-login'), (req, res, next) => {
-  res.send('ss');
+  res.status(200).send('ss');
   next();
 });
 

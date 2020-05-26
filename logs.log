@@ -323,3 +323,111 @@
 {"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-11 18:04:21"}
 {"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-11 18:04:21"}
 {"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-11 18:04:21"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:23:34"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:23:34"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:23:34"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:04"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:04"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:04"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:59"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:59"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:30:59"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:31:35"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:31:35"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:31:35"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:33:10"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:33:10"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:33:10"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:37"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:37"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:37"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:45"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:45"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:45"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:59"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:59"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:40:59"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:41:09"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:41:09"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:41:09"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:43:14"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 13:43:14"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 13:43:14"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:14"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:14"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:14"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:58"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:58"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:05:58"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:09:32"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:09:32"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:09:32"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:52"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:52"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:52"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:58"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:58"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:11:58"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:03"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:03"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:03"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:43"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:43"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:12:43"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:13:54"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:13:54"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:13:54"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:13"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:13"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:13"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:36"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:36"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:14:36"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:15"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:15"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:15"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:41"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:41"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:15:41"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:16:20"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:16:20"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:16:20"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:17:56"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:17:56"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:17:56"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:06"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:06"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:06"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:19"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:19"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:19"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:28"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:28"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:18:28"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:00"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:00"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:00"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:47"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:47"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:19:47"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:20"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:20"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:20"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:24"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:24"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:22:24"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:22"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:22"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:22"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:29"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:29"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 14:23:29"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:27:57"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:27:57"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 15:27:57"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:34"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:34"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:34"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:45"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:45"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-03-16 15:29:45"}

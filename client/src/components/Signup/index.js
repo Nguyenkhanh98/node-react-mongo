@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import Input from '../form/input';
-import './index.scss';
+import TextInput from '../form/textInput';
+import Class from './index.scss';
 import { text } from '@fortawesome/fontawesome-svg-core';
+import backgroundImg from '../../static/images/signUpBackground.jpg'
 
 import User from '../../services/public/user';
 const textField ={
@@ -51,7 +52,6 @@ class Signup extends React.Component {
                 this.setState({ [currentValue]: {...data[currentValue], value: '', error: `${data[currentValue].name} is not valid`}});
                 isDataValid = false;
               }
-
           }
       }
     });
@@ -63,13 +63,15 @@ class Signup extends React.Component {
   render() {
 
     return (
-      <div className="signup">
-        <h3>Sign up</h3>
+      <div className="signup" style= {{ backgroundImage: `url(${backgroundImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+
         <div className="signup-form">
-          <Input type ="text" icon={faUser} placeholder="User Name"  name="userName" data={this.state.userName} onChange={this.handleChange}  ></Input>
-          <Input type ="email" icon={faEnvelope} placeholder="Email" name="email" data={this.state.email} onChange={this.handleChange} ></Input>
-          <Input type="password" icon={faLock} placeholder="Password"  name="password" data={this.state.password} onChange={this.handleChange} ></Input>
-          <Input type="text" icon = {faPhone} placeholder="Phone Number"  name="phone" data = {this.state.phone} onChange={this.handleChange}></Input>
+          <h3>Sign up</h3>
+          <TextInput type ="text" icon={faUser} placeholder="User Name"  name="userName" data={this.state.userName} onChange={this.handleChange}  ></TextInput>
+          <TextInput type ="email" icon={faEnvelope} placeholder="Email" name="email" data={this.state.email} onChange={this.handleChange} ></TextInput>
+          <TextInput type="password" icon={faLock} placeholder="Password"  name="password" data={this.state.password} onChange={this.handleChange} ></TextInput>
+          <TextInput type="text" icon = {faPhone} placeholder="Phone Number"  name="phone" data = {this.state.phone} onChange={this.handleChange}></TextInput>
+          <TextInput type="text" icon = {faPhone} placeholder="Phone Number"  name="phone" data = {this.state.phone} onChange={this.handleChange}></TextInput>
           <button type="submit" className="signup-form-submit" onClick={this.register.bind(this)}> Register </button>
         </div>
       </div>

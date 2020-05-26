@@ -11,25 +11,16 @@ class Input extends React.PureComponent {
     const { data } = this.props;
     return (
       <div className="input">
-        {icon ? (<FontAwesomeIcon style={siblingStyle} icon={icon} />) : (
-          <label style={siblingStyle}>
-            {label}
-          </label>
-        )}
+
         <input
           type={type}
           placeholder={data.error ? data.error : placeholder}
           name={name}
           value={data.value}
           onChange={onChange}
-          style={(data.error && data.value === '') ? { ...inputStyle, border: '1px solid #e03c3c' } : inputStyle}
+          style={(data.error && data.value === '') ? { border: '1px solid #e03c3c' } : null}
         />
-        {right ? (
-          <label style={siblingStyle}>
-            {label}
-          </label>
-        ) : ''}
-
+        {icon ? (<FontAwesomeIcon style={siblingStyle} icon={icon} />) : null}
       </div>
     );
   }
@@ -43,8 +34,6 @@ Input.defaultProps = {
   icon: '',
   label: '',
   right: '',
-  inputStyle: { width: '70%' },
-  siblingStyle: { width: '20%' },
   name: '',
 };
 

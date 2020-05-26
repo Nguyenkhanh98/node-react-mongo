@@ -1,17 +1,30 @@
 @import '../app//index.scss';
 .signup {
-  margin-top: 6em;
-  h3{
-    text-align: center;
-    font-size: 2.2em;
-  }
-  &-form {
-    width: 24em;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid $defaultcolor;
-    padding:3em 2em;
+  height: 100%;
+  width: 100%;
+  background-repeat: 'no-repeat';
+   background-size: 'cover';
+   position: fixed;
+   left: 0;
 
+  &-form {
+
+    background-color: $background;
+    width: 32em;
+    margin: auto;
+    margin-top: 4em;
+    border: 1px solid $defaultcolor;
+    border-radius: 0.3em;
+    padding: 1.8em 2em;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(102, 101, 101);
+    h3{
+      text-align: center;
+      font-size: 1.8em;
+      color: $titlecolor;
+      margin-top: 0.2em;
+      margin-bottom: 2em;
+    }
     &-input {
       margin-bottom: 1em;
       margin-left: auto;

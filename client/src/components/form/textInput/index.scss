@@ -8,9 +8,17 @@
     // width: 20% !important;
     color:  $textcolor ;
     text-align: center;
+    position: absolute;
   }
   input{
-    padding-left: 0.2em;
-    height: 1.7em;
+    box-sizing: border-box;
+    padding-left: 1.8em;
+    width:100%;
+    height: 2.6em;
+    border: 1px solid $bordercolor;
+    border-radius: 0.2em;
+    &::placeholder{
+      font-size: 1.1em;
+    }
   }
 }
