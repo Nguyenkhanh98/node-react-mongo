@@ -72,6 +72,7 @@ class Signup extends React.Component {
           <TextInput type="password" icon={faLock} placeholder="Password"  name="password" data={this.state.password} onChange={this.handleChange} ></TextInput>
           <TextInput type="text" icon = {faPhone} placeholder="Phone Number"  name="phone" data = {this.state.phone} onChange={this.handleChange}></TextInput>
           <TextInput type="text" icon = {faPhone} placeholder="Phone Number"  name="phone" data = {this.state.phone} onChange={this.handleChange}></TextInput>
+          <a> Already have account? Click here to sign in !</a>
           <button type="submit" className="signup-form-submit" onClick={this.register.bind(this)}> Register </button>
         </div>
       </div>
