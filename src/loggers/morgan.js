@@ -1,5 +1,5 @@
-const morgan = require('morgan');
+const morgan = require('morgan')
 
-const logger = morgan('combined');
+const logger = morgan('combined')
 
-module.exports = logger;
+module.exports = logger
