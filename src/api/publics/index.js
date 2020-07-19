@@ -35,7 +35,7 @@ router.post('/googleLogin', async (req, res, next) => {
 			res.send(500, { message: 'request failure' });
 		}
 	} catch (error) {
-		res.send(500);
+		res.send(500, { data: error, message: 'invalid token' });
 
 		console.log(error);
 	}
