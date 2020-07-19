@@ -1,9 +1,9 @@
 const restifyRouter = require('restify-router');
 const errors = require('restify-errors');
 const { OAuth2Client } = require('google-auth-library');
-const configs = require('../../configs/index');
-const log = require('../../loggers/bunyan');
-const accountService = require('../../services/account');
+const configs = require('../../../configs/index');
+const log = require('../../../loggers/bunyan');
+const accountService = require('../../../services/account');
 
 const router = new restifyRouter.Router();
 
@@ -35,7 +35,7 @@ router.post('/googleLogin', async (req, res, next) => {
 			res.send(500, { message: 'request failure' });
 		}
 	} catch (error) {
-		res.send(500, { data: error, message: 'invalid token' });
+		res.send(401, { data: error, message: 'invalid token' });
 
 		console.log(error);
 	}

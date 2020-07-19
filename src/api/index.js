@@ -1,13 +1,26 @@
 const restifyRouter = require('restify-router');
-
 const router = new restifyRouter.Router();
-const publicApi = require('./publics');
-const userApi = require('./users');
-const adminApi = require('./admins');
+
+const home = require('./home');
+
+const common = require('./v1/common');
+const users = require('./v1/users');
+const histories = require('./v1/histories');
+const actions = require('./v1/actions');
+const couples = require('./v1/couples');
+const messages = require('./v1/messages');
+
+const version1 = '/api/v1';
 
 module.exports = (server) => {
-	router.add('/api', publicApi);
-	router.add('/api/admin', adminApi);
-	router.add('/api/user', userApi);
+	// router.get('/', home);
+	console.log(router);
+	// router.group(version1, function (router) {
+	router.add(`${version1}/common`, common);
+	// router.add('/histories', histories);
+	// router.add('/actions', actions);
+	router.add(`${version1}/users`, users);
+	// router.add('/couples', couples);
+	// });
 	router.applyRoutes(server);
 };
