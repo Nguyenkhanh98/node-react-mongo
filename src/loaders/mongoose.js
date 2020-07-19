@@ -3,7 +3,7 @@ const configs = require('../configs');
 const logs = require('../loggers/winston');
 
 module.exports = async () => {
-	const dbConnection = await mongoose.connect(`mongodb://${configs.dbHost}`, {
+	const dbConnection = await mongoose.connect(configs.dbHost, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	});
