@@ -1,14 +1,14 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
-import './index.scss';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types'
+import './index.scss'
 
 class Input extends React.PureComponent {
-  render() {
+  render () {
     const {
-      className, icon, label, type, placeholder, onChange, right, name, inputStyle, siblingStyle,
-    } = this.props;
-    const { data } = this.props;
+      className, icon, label, type, placeholder, onChange, right, name, inputStyle, siblingStyle
+    } = this.props
+    const { data } = this.props
     return (
       <div className="input">
 
@@ -22,7 +22,7 @@ class Input extends React.PureComponent {
         />
         {icon ? (<FontAwesomeIcon style={siblingStyle} icon={icon} />) : null}
       </div>
-    );
+    )
   }
 }
 
@@ -34,8 +34,8 @@ Input.defaultProps = {
   icon: '',
   label: '',
   right: '',
-  name: '',
-};
+  name: ''
+}
 
 Input.propTypes = {
   type: PropTypes.string.isRequired,
@@ -48,6 +48,6 @@ Input.propTypes = {
   onChange: PropTypes.func,
   icon: PropTypes.object,
   label: PropTypes.string,
-  right: PropTypes.any,
-};
-export default Input;
+  right: PropTypes.any
+}
+export default Input

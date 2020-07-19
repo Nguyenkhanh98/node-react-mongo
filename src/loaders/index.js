@@ -4,21 +4,21 @@ const restifyLoader = require('./restify');
 const dependencyInjection = require('./dependencyInjection');
 
 module.exports = async (restifyServer) => {
-  await mongooseLoader();
-  logger.info('db loaded');
+	await mongooseLoader();
+	logger.info('db loaded');
 
-  const userModel = {
-    name: 'userModel',
+	const userModel = {
+		name: 'userModel',
 
-    /* eslint-disable global-require */
-    model: require('../models/user'),
-  };
-  await dependencyInjection({
-    models: [
-      userModel,
-    ],
-  });
+		/* eslint-disable global-require */
+		model: require('../models/user')
+	};
+	await dependencyInjection({
+		models: [
+			userModel
+		]
+	});
 
-  await restifyLoader(restifyServer);
-  logger.info('Restify loaded');
+	await restifyLoader(restifyServer);
+	logger.info('Restify loaded');
 };

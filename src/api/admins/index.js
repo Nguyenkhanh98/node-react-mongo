@@ -1,10 +1,9 @@
-const restifyRouter = require('restify-router');
+const restifyRouter = require('restify-router')
 
-const router = new restifyRouter.Router();
+const router = new restifyRouter.Router()
 
 router.get('/', (req, res, next) => {
-  next();
-});
+  next()
+})
 
-
-module.exports = router;
+module.exports = router

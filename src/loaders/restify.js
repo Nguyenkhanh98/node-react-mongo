@@ -10,28 +10,28 @@ const config = require('../configs');
 const log = require('../loggers/winston');
 
 module.exports = async (server) => {
-  server.use(restify.plugins.acceptParser(server.acceptable));
-  server.use(restify.plugins.queryParser());
-  server.use(restify.plugins.bodyParser());
-  server.use(session({
-    cookieName: 'session',
-    secret: config.secret,
-    duration: 365 * 24 * 60 * 60 * 1000,
-  }));
-  server.use(passport.initialize());
-  server.use(passport.session());
-  passportConfig(passport);
+	server.use(restify.plugins.acceptParser(server.acceptable));
+	server.use(restify.plugins.queryParser());
+	server.use(restify.plugins.bodyParser());
+	server.use(session({
+		cookieName: 'session',
+		secret: config.secret,
+		duration: 365 * 24 * 60 * 60 * 1000
+	}));
+	server.use(passport.initialize());
+	server.use(passport.session());
+	passportConfig(passport);
 
-  const cors = corsMiddleware({
-    preflightMaxAge: 5,
-    origins: ['http://localhost:3000'],
-  });
-  server.use(cors.actual);
+	const cors = corsMiddleware({
+		preflightMaxAge: 5,
+		origins: ['http://localhost:3000']
+	});
+	server.use(cors.actual);
 
-  server.pre(cors.preflight);
-  server.pre((req, res, next) => {
-    req.log.info({ req }, 'REQUEST');
-    next();
-  });
-  api(server);
+	server.pre(cors.preflight);
+	server.pre((req, res, next) => {
+		req.log.info({ req }, 'REQUEST');
+		next();
+	});
+	api(server);
 };

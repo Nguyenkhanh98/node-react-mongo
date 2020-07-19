@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import './index.scss';
-
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import './index.scss'
 
 const Header = () => (
   <>
@@ -13,6 +12,6 @@ const Header = () => (
       </nav>
     </header>
   </>
-);
+)
 
-export default Header;
+export default Header
