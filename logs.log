@@ -875,3 +875,9 @@
 {"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-19 21:25:39"}
 {"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-19 21:25:39"}
 {"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-19 21:25:39"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:34"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:34"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:34"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:46"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:46"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-19 22:47:46"}
