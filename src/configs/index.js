@@ -14,5 +14,6 @@ module.exports = {
   googleService: process.env.GOOGLE_SERVICE || '',
   googleSecret: process.env.GOOGLE_SECRET || '',
   callBackUrl: process.env.CALLBACK_URL || ''
+  iosClientID: process.env.IOS_CLIENT_ID || '',
 
 };

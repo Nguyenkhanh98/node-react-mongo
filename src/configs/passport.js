@@ -5,6 +5,7 @@ const configs = require('../configs');
 const accountService = require('../services/account');
 
 const clientID = configs.googleService;
+const clientIDIos = configs.iosClientID;
 module.exports = (passport) => {
   passport.use('local-login', new LocalStragy({ passReqToCallback: true }, async (username, email, password, done) => {
     try {
@@ -21,7 +22,7 @@ module.exports = (passport) => {
     }
   }));
 
-  passport.use( new GoogleTokenStrategy({ clientID}, async(parseToken, googleId, done)=> {
+  passport.use( new GoogleTokenStrategy([clientID, clientIDIos ], async(parseToken, googleId, done)=> {
     const { email, picture, given_name, family_name, email_verified } = parseToken;
 	try {
     const user = await accountService.loginGoogle({ email, firstName: family_name, lastName: given_name, picture });
