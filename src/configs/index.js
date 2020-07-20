@@ -13,7 +13,7 @@ module.exports = {
 	secret: process.env.SESSION_SECRET || '',
   googleService: process.env.GOOGLE_SERVICE || '',
   googleSecret: process.env.GOOGLE_SECRET || '',
-  callBackUrl: process.env.CALLBACK_URL || ''
+  callBackUrl: process.env.CALLBACK_URL || '',
   iosClientID: process.env.IOS_CLIENT_ID || '',
 
 };
