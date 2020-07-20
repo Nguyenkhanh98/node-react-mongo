@@ -1,5 +1,5 @@
 const userModel = require('../models/user');
-const log = require('../loggers/bunyan');
+const { default: user } = require('../models/user');
 
 const account = {};
 account.signUp = async (params) => {
@@ -27,14 +27,13 @@ account.signUp = async (params) => {
 
 account.loginGoogle = async (params) => {
 	const { email, firstName, lastName, picture } = params;
-	console.log(params);
 	try {
-		let User = await userModel.findOne({ email });
+    let User = await userModel.findOne({ email });
 		if (User) {
-			User = await userModel.update({ email }, { first_name: firstName, last_name: lastName, avatar: picture });
+			User.save({ first_name: firstName, last_name: lastName, avatar: picture })
 		} else {
 			User = await userModel.create({ email, first_name: firstName, last_name: lastName, avatar: picture });
-		}
+    }
 		if (User) {
 			const { role, _id, email, first_name, last_name, createdAt, updatedAt, avatar } = User;
 			const data = { role, _id, email, first_name, last_name, createdAt, updatedAt, avatar };

@@ -1,7 +1,10 @@
-const LocalStragy = require('passport-local').Strategy
-const log = require('../loggers/bunyan')
+const LocalStragy = require('passport-local').Strategy;
+const GoogleTokenStrategy = require('passport-google-verify-token').Strategy;
 const userModel = require('../models/user')
+const configs = require('../configs');
+const accountService = require('../services/account');
 
+const clientID = configs.googleService;
 module.exports = (passport) => {
   passport.use('local-login', new LocalStragy({ passReqToCallback: true }, async (username, email, password, done) => {
     try {
@@ -16,11 +19,26 @@ module.exports = (passport) => {
       log.error(error.message, 'at error passport')
       return done(null, false, JSON.stringify(error))
     }
-  }))
+  }));
+
+  passport.use( new GoogleTokenStrategy({ clientID}, async(parseToken, googleId, done)=> {
+    const { email, picture, given_name, family_name, email_verified } = parseToken;
+	try {
+    const user = await accountService.loginGoogle({ email, firstName: family_name, lastName: given_name, picture });
+		if (user) {
+      done(null, user);
+		} else {
+			done(error, null);
+		}
+	} catch (error) {
+    done(error, null);
+	}
+  }));
 
   passport.serializeUser((user, done) => {
-    done(null, user.id)
+    done(null, user._id);
   })
+
   passport.deserializeUser(async (id, done) => {
     const user = await userModel.findById({ id })
     if (user) {

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const log = require('../loggers/bunyan');
 
 const SALT_WORK_FACTOR = 10;
 const User = new mongoose.Schema({
