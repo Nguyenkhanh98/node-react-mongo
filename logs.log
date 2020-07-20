@@ -1122,3 +1122,16 @@
 {"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:47:17"}
 {"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:47:17"}
 {"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-20 22:47:17"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:10"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:10"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:10"}
+{"message":"db loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering POST at uri /api/v1/auth/signup","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering POST at uri /api/v1/auth/google-login","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering GET at uri /api/v1/users/:id","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering GET at uri /api/v1/users","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering POST at uri /api/v1/users","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering PUT at uri /api/v1/users/:id","timestamp":"2020-07-20 22:56:56"}
+{"service":"user-service","level":"info","message":"Registering DEL at uri /api/v1/users/:id","timestamp":"2020-07-20 22:56:56"}
+{"message":"Restify loaded","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:56"}
+{"message":"\npersonal listening to http://[::]:8080","level":"info","service":"user-service","timestamp":"2020-07-20 22:56:56"}
