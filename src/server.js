@@ -5,7 +5,7 @@ const logger = require('./loggers/winston');
 const server = restify.createServer({
 	name: 'personal',
   version: '0.1.0',
-  logger
+  log:logger
 });
 
 const startServer = async () => {
