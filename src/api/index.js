@@ -15,7 +15,6 @@ const version1 = '/api/v1';
 
 module.exports = (server) => {
 	// router.get('/', home);
-	console.log(router);
 	// router.group(version1, function (router) {
 	router.add(`${version1}/auth`, auth);
 	// router.add('/histories', histories);

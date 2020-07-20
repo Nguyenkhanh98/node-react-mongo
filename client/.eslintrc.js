@@ -18,5 +18,11 @@ module.exports = {
     'react'
   ],
   rules: {
-  }
+		semi: [
+			'error',
+			'always'
+		],
+		indent: [2, 'tab'],
+		'no-tabs': 'off'
+	}
 }

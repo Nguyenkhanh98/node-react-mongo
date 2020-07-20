@@ -23,8 +23,11 @@ router.get('/:id', async (req, res, next) => {
 		const user = await userService.getUserById(id);
 		if (user) {
 			res.send(200, { data: user, message: 'get user successfully' });
-		}
+    }
+    else {
+
 		res.send(404, { data: user, message: 'not found' });
+  }
 	} catch (error) {
 		logger.error(error);
 		res.send(500, { data: error });
