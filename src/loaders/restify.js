@@ -33,5 +33,10 @@ module.exports = async (server) => {
 		req.log.info({ req }, 'REQUEST');
 		next();
 	});
+
+	// server.get(/\/public\/?.*/, restify.serveStatic({
+	// 	directory: __dirname
+	// }));
+
 	api(server);
 };

@@ -1,12 +1,11 @@
 const restify = require('restify');
 const config = require('./configs');
 const logger = require('./loggers/winston');
-const log = require('./loggers/bunyan');
 
 const server = restify.createServer({
 	name: 'personal',
-	version: '0.1.0',
-	log
+  version: '0.1.0',
+  logger
 });
 
 const startServer = async () => {

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently --kill-others \"yarn client\" \"yarn server\"",
-    "start":  "node src/server",
+    "start": "node src/server",
     "server": " nodemon src/server",
     "client": "npm start --prefix client",
     "lint:fix": "eslint ./**/*.js --fix"
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
-    "bunyan": "^1.8.12",
     "client-sessions": "^0.8.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -31,6 +30,8 @@
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-verify-token": "^0.3.0",
     "passport-local": "^1.0.0",
     "postcss-normalize": "^9.0.0",
     "restify": "^8.5.1",
