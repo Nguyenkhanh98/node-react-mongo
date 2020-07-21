@@ -24,6 +24,7 @@ module.exports = (passport) => {
 
   passport.use( new GoogleTokenStrategy([clientID, clientIDIos ], async(parseToken, googleId, done)=> {
     const { email, picture, given_name, family_name, email_verified } = parseToken;
+    console.log('-----------------------------------------');
 	try {
     const user = await accountService.loginGoogle({ email, firstName: family_name, lastName: given_name, picture });
 		if (user) {
@@ -41,7 +42,10 @@ module.exports = (passport) => {
   })
 
   passport.deserializeUser(async (id, done) => {
-    const user = await userModel.findById({ id })
+    const user = await userModel.findById(id);
+    console.log('-----------------------------------------');
+
+    console.log(user);
     if (user) {
       done(null, user)
     } else {
