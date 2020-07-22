@@ -5,7 +5,8 @@ const log = require('./loggers/bunyan');
 
 const server = restify.createServer({
 	name: 'personal',
-  version: '0.1.0',
+	version: '0.1.0',
+	log
 });
 
 const startServer = async () => {

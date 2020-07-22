@@ -32,7 +32,17 @@ const User = new mongoose.Schema({
 	},
 	avatar: {
 		type: String
-	}
+	},
+	location: {
+		type: String
+  },
+  email_verified: {
+    type: Boolean
+  },
+  is_deleted: {
+    type: Boolean,
+    default: false
+  }
 },
 { timestamps: true });
 User.pre('save', function preSave (next) {

@@ -10,7 +10,7 @@ const Login = () => {
 		const { id_token } = data.tokenObj;
 		window.sessionStorage.setItem('access_token', id_token);
 		try {
-			const login = await axios.post(`${API}/${googleLoginAPI}`, { access_token: id_token });
+			const login = await axios.post(`${API}/${googleLoginAPI}`, { idToken: id_token });
 			console.log(login);
 		} catch (error) {
 			// console.log(error);
@@ -18,6 +18,11 @@ const Login = () => {
 	};
 	const onFailure = async (error) => {
 		console.log(error);
+	};
+	const onClick = async (e) => {
+		e.preventDefault();
+		const data = await axios.get('localhost:8080/api/v1/users');
+		console.log(data);
 	};
 	return (
 		<>
@@ -30,6 +35,7 @@ const Login = () => {
 				isSignedIn={true}
 
 			/>
+			<button onClick = {onClick}>CLICK</button>
 		</>
 	);
 };

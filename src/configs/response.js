@@ -1,5 +1,7 @@
-const response = (res, status, message = '', data = '') => {
-
+const response = (isSuccess, status, message = '', data = '') => {
+  return {
+    isSuccess, status, message, data
+  }
 };
 
 module.exports = response;

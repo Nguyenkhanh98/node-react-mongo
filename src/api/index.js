@@ -7,7 +7,7 @@ const common = require('./v1/common');
 const auth = require('./v1/auth');
 const users = require('./v1/users');
 const histories = require('./v1/histories');
-const actions = require('./v1/actions');
+const posters = require('./v1/posters');
 const couples = require('./v1/couples');
 const messages = require('./v1/messages');
 
@@ -17,6 +17,8 @@ module.exports = (server) => {
 	// router.get('/', home);
 	// router.group(version1, function (router) {
 	router.add(`${version1}/auth`, auth);
+	router.add(`${version1}/posters`, posters);
+
 	// router.add('/histories', histories);
 	// router.add('/actions', actions);
 	router.add(`${version1}/users`, users);
