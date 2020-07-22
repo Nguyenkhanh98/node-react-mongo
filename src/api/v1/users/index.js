@@ -1,87 +1,82 @@
 const restifyRouter = require('restify-router');
 const userService = require('../../../services/users');
-const logger = require('../../../loggers/winston');
 const router = new restifyRouter.Router();
 const passport = require('passport');
-
 const LIMIT = 10;
 const OFFSET = 0;
 
-router.post('', passport.authenticate('local-login'), (req, res, next) => {
-	res.status(200).send('ss');
-	next();
-});
+
 
 router.get('/:id', async (req, res, next) => {
 	const { id } = req.params || '';
-	console.log(req.query);
 	if (!id) {
 		res.send(422, { message: 'id is required' });
 	}
 
-	try {
-		const user = await userService.getUserById(id);
-		if (user) {
-			res.send(200, { data: user, message: 'get user successfully' });
-    }
-    else {
-
-		res.send(404, { data: user, message: 'not found' });
-  }
-	} catch (error) {
-		logger.error(error);
-		res.send(500, { data: error });
-	}
+    const user = await userService.getUserById(id);
+    const { isSuccess, status, message, data} = user ;
+		if (isSuccess) {
+		return	res.send(status, { data, message });
+		}
+			res.send(status, { message}) ;
 });
 
-router.get('', async (req, res, next) => {
+router.get('',passport.authenticate('jwt', {session: false}) , async (req, res, next) => {
+
 	let { limit, offset } = req.query || '';
 
 	limit = limit || LIMIT;
 	offset = offset || OFFSET;
 
-	try {
-		const users = await userService.getListUser({ limit, offset });
-		if (users) {
-			res.send(200, { data: users, message: 'list users successfully' });
-		}
-	} catch (error) {
-		logger.error(error);
-		res.send(500, { data: error });
-	}
+    const users = await userService.getListUser({ limit, offset });
+    const { isSuccess, status, message, data} = users ;
+
+		if (isSuccess) {
+			return res.send(status, { data, message});
+    }
+		res.send(status, {message });
+
 });
 
-router.put('/:id', async (req, res, next) => {
-	const { id } = req.query || '';
-	const params = req.body || '';
+router.put('/:id',passport.authenticate('jwt', {session: false}), async (req, res, next) => {
+
+	const { id } = req.params || '';
+  const params = req.body || '';
+
 	if (!id) {
-		res.send(422, { message: 'id is required' });
-	}
-	try {
-		const user = await userService.updateUserById(id, params);
-		if (user) {
-			res.send(200, { data: user, message: 'update user successfully' });
-		}
-	} catch (error) {
-		logger.error(error);
-		res.send(500, { data: error });
-	}
+		return res.send(422, { message: 'id is required' });
+  }
+
+  if (id !== req.user._id.toString()) {
+    return res.send(401, {message: 'you dont have permission'});
+  }
+
+    const user = await userService.updateUserById(id, params);
+    const { isSuccess, status, message, data } = user ;
+
+    if (isSuccess) {
+		 return	res.send(status, { data, message });
+    }
+
+    res.send(status, {  message });
 });
 
-router.del('/:id', async (req, res, next) => {
-	const { id } = req.query || '';
+router.del('/:id',passport.authenticate('jwt', {session: false}),  async (req, res, next) => {
+	const { id } = req.params || '';
 	if (!id) {
-		res.send(422, { message: 'id is required' });
-	}
-	try {
-		const user = await userService.deleteUserById(id);
-		if (user) {
-			res.send(200, { data: user, message: 'delete user successfully' });
-		}
-	} catch (error) {
-		logger.error(error);
-		res.send(500);
-	}
+    return	res.send(422, { message: 'id is required' });
+  }
+  if (id !== req.user._id.toString()) {
+    return res.send(401, {message: 'you dont have permission'});
+  }
+
+    const user = await userService.deleteUserById(id);
+    const { isSuccess, status, message, data } = user ;
+
+		if (isSuccess) {
+		return	res.send(status,{ message });
+    }
+    return res.send(status, {message});
 });
 
 module.exports = router;
