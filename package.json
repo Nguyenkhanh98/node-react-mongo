@@ -8,7 +8,8 @@
     "server": " nodemon src/server",
     "client": "npm start --prefix client",
     "lint:fix": "eslint ./**/*.js --fix",
-    "key": "node generateKey.js"
+    "key": "node generateKey.js",
+    "swagger": "node src/configs/swagger"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
@@ -42,6 +43,7 @@
     "restify-cors-middleware": "^1.1.1",
     "restify-errors": "^8.0.2",
     "restify-router": "^0.5.1",
+    "swagger-jsdoc": "^4.0.0",
     "typedi": "^0.8.0",
     "winston": "^3.2.1"
   },

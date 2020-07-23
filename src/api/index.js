@@ -26,3 +26,13 @@ module.exports = (server) => {
 	// });
 	router.applyRoutes(server);
 };
+
+/**
+ * @swagger
+ * components:
+ *   securitySchemes:
+ *     bearerAuth:
+ *       type: http
+ *       scheme: bearer
+ *       bearerFormat: JWT
+ */
