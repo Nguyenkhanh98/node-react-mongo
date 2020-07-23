@@ -56,8 +56,6 @@ module.exports = router;
  *    tags:
  *    - Auth
  *    summary: login with google
- *    security:
- *      - bearerAuth: []
  *    requestBody:
  *      description: data to get token
  *      required: true
